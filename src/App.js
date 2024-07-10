@@ -1,7 +1,12 @@
 import './App.css';
+import ProductCard from './components/Productcard/index.tsx';
 
 function App() {
-  return <div className="App bg-orange-200 w-screen h-screen"></div>;
+  return (
+    <div className="App">
+      <ProductCard />
+    </div>
+  );
 }
 
 export default App;

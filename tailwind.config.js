@@ -1,8 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{html,js}'],
+  content: ['./src/**/*.{html,tsx}'],
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        channelFont: ['Fraunces', 'serif']
+      }
+    }
   },
   plugins: []
 };

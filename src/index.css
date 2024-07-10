@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.product-card{
+  width: 600px;
+  height: 400px;
+}
+
+.product-type{
+  text-transform: uppercase;
+}
+
+.product-img{
+  object-fit: cover;
+  height: -webkit-fill-available;
+}
