@@ -1,12 +1,11 @@
-export const productType: string = 'perfume';
+import { ProductDataProps } from '../customTypes';
 
-export const productTitle: string = 'gabrielle essence eau de parfum';
-
-export const productDetails: string =
-  'A floral, solar and voluptuous interpretation composed by Krysthopher Ruiz alias puchini, Perfume-Creator for the house of Enchilada.';
-
-export const currentPrice: string = '$240.59';
-
-export const oldPrice: string = '$500.87';
-
-export const buttonContent: string = 'Compratelo';
+export const productData: ProductDataProps = {
+  productType: 'perfume',
+  productTitle: 'gabrielle essence eau de parfum',
+  productDetails:
+    'A floral, solar and voluptuous interpretation composed by Krysthopher Ruiz alias puchini, Perfume-Creator for the house of Enchilada.',
+  currentPrice: 245.59,
+  oldPrice: 500.87,
+  buttonContent: 'Compratelo'
+};

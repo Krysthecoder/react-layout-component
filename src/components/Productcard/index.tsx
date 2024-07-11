@@ -1,29 +1,15 @@
 import React from 'react';
 import ImageCard from './ProductImg/index.tsx';
 import ProductContent from './/ProductContent/index.tsx';
-import {
-  productType,
-  productTitle,
-  productDetails,
-  currentPrice,
-  oldPrice,
-  buttonContent
-} from '../../utils/utilsData.tsx';
+import { productData } from '../../utils/utilsData.tsx';
 
-function ProductCard() {
+const ProductCard = () => {
   return (
-    <div className="product-card flex mx-auto mt-8 flex-col sm:flex-row sm:mt-24">
+    <div className="sm:bg-white w-[500px] h-auto  sm:w-[600px] sm:h-[420px]  flex mx-auto items-center justify-center mt-8 flex-col sm:flex-row sm:mt-24 rounded-bl-lg rounded-br-lg sm:rounded-bl-none sm:rounded-tr-lg">
       <ImageCard />
-      <ProductContent
-        productType={productType}
-        productTitle={productTitle}
-        productDetails={productDetails}
-        currentPrice={currentPrice}
-        oldPrice={oldPrice}
-        buttonContent={buttonContent}
-      />
+      <ProductContent {...productData} />
     </div>
   );
-}
+};
 
 export default ProductCard;

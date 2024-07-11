@@ -1,30 +1,22 @@
 import React from 'react';
 import { FaOpencart } from 'react-icons/fa';
+import { productProps } from '../../../customTypes';
 
-type productProps = {
-  productType: string;
-  productTitle: string;
-  productDetails: string;
-  currentPrice: string;
-  oldPrice: string;
-  buttonContent: string;
-};
-
-export default function ProductContent({
+const ProductContent: React.FC<productProps> = ({
   productType,
   productTitle,
   productDetails,
   currentPrice,
   oldPrice,
   buttonContent
-}: productProps) {
+}) => {
   return (
-    <div className="product-content flex w-5/6 sm:w-3/6 flex-col bg-white justify-evenly pl-4 pr-10 pb-4 rounded-bl-lg rounded-br-lg sm:rounded-bl-none sm:rounded-tr-lg ">
-      <p className="product-type text-start font-serif text-sm">
+    <div className="bg-white h-[300px] flex gap-4 w-5/6 sm:w-3/6 flex-col justify-center pl-4 pr-10 pb-4 rounded-bl-lg rounded-br-lg sm:rounded-bl-none sm:rounded-tr-lg">
+      <p className="text-start font-serif text-sm uppercase mt-3">
         {productType}
       </p>
 
-      <p className="product-title capitalize font-channelFont font-black text-2xl lg:text-4xl md:text-4xl sm:text-4xl  ">
+      <p className="capitalize font-channelFont font-black text-2xl lg:text-4xl md:text-4xl sm:text-4xl">
         {productTitle}
       </p>
 
@@ -32,17 +24,19 @@ export default function ProductContent({
 
       <div className="flex w-full justify-between pr-4">
         <p className="font-channelFont text-2xl text-orange-700 font-black italic">
-          {currentPrice}
+          ${currentPrice}
         </p>
         <p className="text-sm line-through pt-1 text-gray-400 font-channelFont">
-          {oldPrice}
+          ${oldPrice}
         </p>
       </div>
 
-      <button className="bg-orange-600 font-channelFont font-semibold w-full mx-auto p-2 rounded-lg flex items-center place-content-center gap-2">
+      <button className="bg-orange-600 hover:bg-orange-950 hover:text-white transition-all duration-300 ease-in-out font-channelFont font-semibold w-full mx-auto p-2 rounded-lg flex items-center place-content-center gap-2">
         <FaOpencart />
         {buttonContent}
       </button>
     </div>
   );
-}
+};
+
+export default ProductContent;
