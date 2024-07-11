@@ -1,5 +1,5 @@
 import React from 'react';
-import productImg from '../../../assets/ProductImg.jpg';
+import productImg from './assets/ProductImg.jpg';
 
 function ImageCard() {
   return (
