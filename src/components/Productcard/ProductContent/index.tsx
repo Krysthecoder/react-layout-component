@@ -19,12 +19,12 @@ export default function ProductContent({
   buttonContent
 }: productProps) {
   return (
-    <div className="flex w-3/6 flex-col bg-white justify-evenly rounded-tr-lg rounded-br-lg pl-4 pr-10">
+    <div className="product-content flex w-5/6 sm:w-3/6 flex-col bg-white justify-evenly pl-4 pr-10 pb-4 rounded-bl-lg rounded-br-lg sm:rounded-bl-none sm:rounded-tr-lg ">
       <p className="product-type text-start font-serif text-sm">
         {productType}
       </p>
 
-      <p className="product-title capitalize text-4xl font-channelFont font-black">
+      <p className="product-title capitalize font-channelFont font-black text-2xl lg:text-4xl md:text-4xl sm:text-4xl  ">
         {productTitle}
       </p>
 
@@ -39,7 +39,7 @@ export default function ProductContent({
         </p>
       </div>
 
-      <button className="bg-orange-600 font-channelFont font-semibold w-5/6 mx-auto p-2 rounded-lg flex items-center place-content-center gap-2">
+      <button className="bg-orange-600 font-channelFont font-semibold w-full mx-auto p-2 rounded-lg flex items-center place-content-center gap-2">
         <FaOpencart />
         {buttonContent}
       </button>

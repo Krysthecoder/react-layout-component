@@ -12,7 +12,7 @@ import {
 
 function ProductCard() {
   return (
-    <div className="product-card mx-auto flex  mt-28">
+    <div className="product-card flex mx-auto mt-8 flex-col sm:flex-row sm:mt-24">
       <ImageCard />
       <ProductContent
         productType={productType}
