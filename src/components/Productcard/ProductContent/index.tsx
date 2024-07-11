@@ -1,8 +1,8 @@
 import React from 'react';
 import { FaOpencart } from 'react-icons/fa';
-import { productProps } from '../../../customTypes';
+import { ProductDataProps } from '../../../customTypes';
 
-const ProductContent: React.FC<productProps> = ({
+const ProductContent: React.FC<ProductDataProps> = ({
   productType,
   productTitle,
   productDetails,

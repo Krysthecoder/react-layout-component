@@ -3,7 +3,7 @@ import productImg from '../../../assets/ProductImg.jpg';
 
 function ImageCard() {
   return (
-    <div className=" w-5/6 sm:w-3/6 ">
+    <div className="w-5/6 sm:w-3/6">
       <img
         src={productImg}
         alt="product-image"
